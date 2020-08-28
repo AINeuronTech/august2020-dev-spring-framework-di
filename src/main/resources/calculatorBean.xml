@@ -3,15 +3,17 @@
         "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-    <bean id="toyota" class="aint.electronics.Toyota" autowire="constructor">
+    <bean id="count" class="aint.electronics.Calculator">
+<!--        <property name="device" ref="deviceInfo"/>-->
     </bean>
 
-    <bean id = "carModelType" class="aint.electronics.Car">
-        <property name="model" value="lexus"/>
+    <bean id = "deviceInfo" class="aint.electronics.Device">
+        <property name="deviceMonitorSize" value="16"/>
+        <property name="deviceRamSize" value="32"/>
     </bean>
 
-    <bean id = "carMakeYear" class="aint.electronics.Car">
-        <property name="year" value="2019"/>
-    </bean>
-
+<!--    <bean id="modernCount" class="aint.electronics.ModernCalculator">-->
+<!--        <property name="device" ref="deviceInfo"/>-->
+<!--    </bean>-->
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 </beans>

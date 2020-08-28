@@ -3,13 +3,15 @@
         "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-    <bean id="desktop" class="aint.electronics.Desktop">
-        <property name="deviceName" ref="deviceInfo"/>
+    <bean id="toyota" class="aint.electronics.Toyota" autowire="constructor">
     </bean>
 
-    <bean id = "deviceInfo" class="aint.electronics.Device">
-        <property name="deviceMonitorSize" value="15"/>
-        <property name="deviceRamSize" value="32"/>
+    <bean id = "carModelType" class="aint.electronics.Car">
+        <property name="model" value="lexus"/>
+    </bean>
+
+    <bean id = "carMakeYear" class="aint.electronics.Car">
+        <property name="year" value="2019"/>
     </bean>
 
 </beans>

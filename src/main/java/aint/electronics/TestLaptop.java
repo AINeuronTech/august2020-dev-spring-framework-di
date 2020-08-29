@@ -9,7 +9,7 @@ public class TestLaptop {
         //Laptop lenovo = new Laptop("Yoga700");
         //lenovo.laptopConfig();
 
-        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("laptop-bean-factory.xml"));
+        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("laptopBeanFactorySetter.xml"));
         Laptop lenovo = (Laptop)beanFactory.getBean("laptop");
         lenovo.laptopConfig();
 
